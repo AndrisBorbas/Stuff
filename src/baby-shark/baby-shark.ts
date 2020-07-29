@@ -22,8 +22,7 @@ function babySharkLyrics(): string {
     write(element);
   });
   lyrics += 'Run away,…';
-  console.log(lyrics);
   return lyrics;
 }
 
-babySharkLyrics();
+console.log(babySharkLyrics());
