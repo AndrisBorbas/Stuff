@@ -1,0 +1,59 @@
+{
+  "env": {
+    "browser": true,
+    "es2020": true,
+    "node": true
+  },
+  "root": true,
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "airbnb",
+    "airbnb/hooks",
+    "airbnb-typescript",
+    "plugin:prettier/recommended",
+    "prettier",
+    "prettier/react",
+    "prettier/@typescript-eslint"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "createDefaultProgram": true
+  },
+  "rules": {
+    "prettier/prettier": "error",
+    "no-plusplus": "off",
+    "no-console": "off",
+    "sort-imports": "off",
+    "import/order": "off",
+    "jsx-a11y/href-no-hash": ["off"],
+    "@typescript-eslint/no-unused-vars": "warn",
+    "react/jsx-filename-extension": [
+      "off",
+      { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+    ],
+    "max-len": [
+      "warn",
+      {
+        "tabWidth": 2,
+        "comments": 100
+      }
+    ],
+    "simple-import-sort/sort": "error",
+
+    // Using a type system makes it safe enough to spread props
+    "react/jsx-props-no-spreading": "off",
+
+    //temp fix
+    "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/naming-convention": "off"
+  },
+  "plugins": ["simple-import-sort", "@typescript-eslint"]
+}
